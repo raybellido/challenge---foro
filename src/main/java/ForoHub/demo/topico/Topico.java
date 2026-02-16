@@ -24,6 +24,7 @@ public class Topico {
 
     @Enumerated(EnumType.STRING)
     private Estado status;
+
     private String autor;
     private String curso;
 
