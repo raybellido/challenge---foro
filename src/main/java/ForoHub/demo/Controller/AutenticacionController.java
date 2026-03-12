@@ -3,8 +3,8 @@ package ForoHub.demo.Controller;
 
 import ForoHub.demo.infra.security.DatosTokenJWT;
 import ForoHub.demo.infra.security.TokenService;
-import ForoHub.demo.usuario.DatosAutenticacion;
-import ForoHub.demo.usuario.Usuario;
+import ForoHub.demo.Domain.usuario.DatosAutenticacion;
+import ForoHub.demo.Domain.usuario.Usuario;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

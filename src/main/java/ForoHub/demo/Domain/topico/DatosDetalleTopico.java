@@ -1,6 +1,4 @@
-package ForoHub.demo.topico;
-
-import jakarta.validation.constraints.NotNull;
+package ForoHub.demo.Domain.topico;
 
 public record DatosDetalleTopico(
         Long id,
@@ -15,7 +13,7 @@ public record DatosDetalleTopico(
                     datos.getTitulo(),
                     datos.getMensaje(),
                     datos.getStatus(),
-                    datos.getAutor(),
+                    datos.getAutor().getNombre(),
                     datos.getCurso());
         }
     }

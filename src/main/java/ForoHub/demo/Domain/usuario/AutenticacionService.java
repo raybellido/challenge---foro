@@ -1,4 +1,4 @@
-package ForoHub.demo.usuario;
+package ForoHub.demo.Domain.usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

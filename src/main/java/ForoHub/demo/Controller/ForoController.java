@@ -1,6 +1,6 @@
 package ForoHub.demo.Controller;
 
-import ForoHub.demo.topico.*;
+import ForoHub.demo.Domain.topico.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/foro")
@@ -25,11 +23,8 @@ public class ForoController {
     public ResponseEntity registrar(@RequestBody @Valid DatosRegistroForo datos, UriComponentsBuilder uriComponentsBuilder){
 
         var topico = new Topico(datos);
-
         repository.save(topico);
-
         var uri = uriComponentsBuilder.path("/foro/{id}").buildAndExpand(topico.getId()).toUri();
-
         return ResponseEntity.created(uri).body(new DatosDetalleTopico(topico));
     }
 

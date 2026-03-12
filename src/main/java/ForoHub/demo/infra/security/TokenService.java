@@ -1,6 +1,6 @@
 package ForoHub.demo.infra.security;
 
-import ForoHub.demo.usuario.Usuario;
+import ForoHub.demo.Domain.usuario.Usuario;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;

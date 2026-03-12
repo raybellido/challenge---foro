@@ -1,5 +1,6 @@
-package ForoHub.demo.topico;
+package ForoHub.demo.Domain.topico;
 
+import ForoHub.demo.Domain.usuario.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -25,7 +26,10 @@ public class Topico {
     @Enumerated(EnumType.STRING)
     private Estado status;
 
-    private String autor;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id")
+    private Usuario autor;
+
     private String curso;
 
     public Topico(DatosRegistroForo datos) {
@@ -50,10 +54,6 @@ public class Topico {
 
         if (datos.mensaje() != null) {
             this.mensaje = datos.mensaje();
-        }
-
-        if (datos.autor() != null) {
-            this.autor = datos.autor();
         }
 
         if (datos.curso() != null) {

@@ -1,4 +1,4 @@
-package ForoHub.demo.topico;
+package ForoHub.demo.Domain.topico;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

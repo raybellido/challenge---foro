@@ -1,6 +1,5 @@
-package ForoHub.demo.usuario;
+package ForoHub.demo.Domain.usuario;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
